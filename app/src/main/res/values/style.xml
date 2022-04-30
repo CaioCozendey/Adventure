@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="inputs">
+        <item name="background"> @drawable/custom_inputs </item>
+        <item name="android:radius"> 16dp </item>
+        <item name="strokeColor"> @color/white </item>
+    </style>
+    <style name="backgrouns_livro_lista">
+        <item name="android:background"> @color/black_45 </item>
+        <item name="android:radius"> 64dp</item>
+    </style>
+
+</resources>

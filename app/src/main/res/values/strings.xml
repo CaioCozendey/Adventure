@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Adventure</string>
+    <string name="title">Adventure</string>
+    <string name="senha_text_eText">senha</string>
+    <string name="edit_text_usuario">email ou nome</string>
+    <string name="email_edit_text">email</string>
+    <string name="esqueceu_a_senha_btn">Esqueceu a senha?</string>
+    <string name="login">login</string>
+    <string name="criar_conta_btn">Criar uma conta</string>
+    <string name="confirmar_senha">confirmar senha</string>
+    <string name="senha">senha</string>
+    <string name="confirmar_email">confirmar email</string>
+    <string name="nome_de_usuario">nome de usuário</string>
+    <string name="criar_conta">Criar conta</string>
+    <string name="biblioteca">Biblioteca</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="anota_es">Anotações</string>
+    <string name="conclu_dos">Concluídos</string>
+    <string name="nome_do_livro">Nome do Livro</string>
+    <string name="nome_do_autor">Nome do Autor</string>
+    <string name="bot_o_mais">Botão_Mais</string>
+    <string name="livro">Livro</string>
+    <string name="adicionar_livro">Livro</string>
+    <string name="adicionar_anota_o">Anotação</string>
+    <string name="todo">TODO</string>
+    <string name="n_mero_de_p_ginas">Número de Páginas</string>
+    <string name="criar">Criar</string>
+</resources>
