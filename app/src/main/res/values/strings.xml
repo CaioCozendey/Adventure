@@ -25,4 +25,14 @@
     <string name="todo">TODO</string>
     <string name="n_mero_de_p_ginas">Número de Páginas</string>
     <string name="criar">Criar</string>
+    <string name="me_pague_um_caf">Me pague um Café</string>
+    <string name="texto_pague_um_cafe">Ajude nosso aplicativo a continuar crescendo e recebendo atualizações.</string>
+    <string name="valor_cafe">R$ 3,99</string>
+    <string name="button_armaz_offline">Armazenamento Offline</string>
+    <string name="descricao_armaz_offline">Tenha acesso as sua informações mesmo sem contato com a Internet.</string>
+    <string name="valor_armaz_offline">R$ 4,99</string>
+    <string name="valorRemoverAnuncio">R$ 9,99</string>
+    <string name="remocaoAnuncios">Remover Propagandas</string>
+    <string name="descricaoRemoverAnuncio">Remoção de todos os anúncios e propagandas, definitivamente.</string>
+    <string name="loja">Loja</string>
 </resources>

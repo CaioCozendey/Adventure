@@ -36,7 +36,6 @@ class LivroAdapter (private val listaDeLivro: ArrayList<Livro>) :
         holder.populaAdapterCom(listaDeLivro[position])
     }
 
-
     override fun getItemCount(): Int {
         return listaDeLivro.size
     }

@@ -22,4 +22,9 @@
         android:icon="@drawable/ic_anotacoes_notes"
         android:id="@+id/bottom_navigation_anotacoes"/>
 
+    <item
+        android:title="@string/loja"
+        android:icon="@drawable/ic_loja"
+        android:id="@+id/bottom_navigation_loja"/>
+
 </menu>
