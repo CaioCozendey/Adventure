@@ -25,7 +25,7 @@ class BibliotecaActivity : AppCompatActivity() {
         val livro1 = Livro("Trono de Vidro", "Sarah J Mass", "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg", 35)
         val livro2 = Livro("The Witcher", "Andrezj", "https://m.media-amazon.com/images/I/511dqSSiUCL._SY346_.jpg", 400)
 
-        val listaDelivro = arrayListOf(livro1, livro2)
+        val listaDelivro = arrayListOf(livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2)
         val recyclerViewLivro = findViewById<RecyclerView>(R.id.recycler_view_livro)
         recyclerViewLivro.layoutManager = LinearLayoutManager(this)
         recyclerViewLivro.adapter = LivroAdapter(listaDelivro)

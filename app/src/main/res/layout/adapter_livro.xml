@@ -77,6 +77,15 @@
                 android:background="@color/no_color"
                 android:layout_marginEnd="8dp" />
 
+            <ImageButton
+                android:id="@+id/imageButton_coracao_favorito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_coracao_favorito"
+                android:background="@color/no_color"
+                app:layout_constraintTop_toTopOf="@id/nome_livro"
+                app:layout_constraintEnd_toEndOf="@id/progress_bar" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
