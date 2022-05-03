@@ -5,8 +5,8 @@ data class Livro(
     val nomeAutor: String,
     val foto: String,
     val numeroPaginasTotal: Int,
-    val primeiraPagina: Int = 1,
-    val paginaAtual: Int = 1,
+    val primeiraPagina: Int,
+    val paginaAtual: Int,
     val favorito: Boolean = false
     )
 

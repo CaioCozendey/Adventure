@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,8 +23,13 @@ class BibliotecaActivity : AppCompatActivity() {
 
         //Início Lista
 
-        val livro1 = Livro("Trono de Vidro", "Sarah J Mass", "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg", 35)
-        val livro2 = Livro("The Witcher", "Andrezj", "https://m.media-amazon.com/images/I/511dqSSiUCL._SY346_.jpg", 400)
+        val primeiraPagina = 1
+
+        val livro1 = Livro("Trono de Vidro", "Sarah J Mass", "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg", 450, primeiraPagina ,15)
+        val livro2 = Livro("The Witcher", "Andrezj", "https://m.media-amazon.com/images/I/511dqSSiUCL._SY346_.jpg", 400, primeiraPagina, 200)
+
+        //exemplo q deve funcionar val listaDeLivro = ArrayList<Model>()
+        // arrayList.add(Model(..................... variaveis), R.drawable....)
 
         val listaDelivro = arrayListOf(livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2)
         val recyclerViewLivro = findViewById<RecyclerView>(R.id.recycler_view_livro)
@@ -31,6 +37,13 @@ class BibliotecaActivity : AppCompatActivity() {
         recyclerViewLivro.adapter = LivroAdapter(listaDelivro)
 
         //Final Lista
+
+        //Início SearchView
+
+        val searchView = findViewById<SearchView>(R.id.searchView)
+
+
+        //Final SearchView
 
         //Floating Action Button Início
 

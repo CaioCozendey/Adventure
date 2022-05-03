@@ -57,7 +57,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/white75"/>
 
-            <androidx.core.widget.ContentLoadingProgressBar
+            <ProgressBar
                 android:id="@+id/progress_bar"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
