@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.load.model.Model
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.parzidev.adventure.adapter.LivroAdapter
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton as ExtendedFloatingActionButton1
@@ -30,6 +31,8 @@ class BibliotecaActivity : AppCompatActivity() {
 
         //exemplo q deve funcionar val listaDeLivro = ArrayList<Model>()
         // arrayList.add(Model(..................... variaveis), R.drawable....)
+        //val listaDeLivroAdd = emptyArray<Model>()
+
 
         val listaDelivro = arrayListOf(livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2)
         val recyclerViewLivro = findViewById<RecyclerView>(R.id.recycler_view_livro)
@@ -40,7 +43,7 @@ class BibliotecaActivity : AppCompatActivity() {
 
         //Início SearchView
 
-        val searchView = findViewById<SearchView>(R.id.searchView)
+        //val searchView = findViewById<SearchView>(R.id.searchView)
 
 
         //Final SearchView
