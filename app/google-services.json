@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "305999112628",
+    "project_id": "aplicativo-adventure",
+    "storage_bucket": "aplicativo-adventure.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305999112628:android:4d3d54124d692f626d6ae1",
+        "android_client_info": {
+          "package_name": "com.parzidev.adventure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305999112628-n99clhega5uhj1lf4nok7lik04msrthu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.parzidev.adventure",
+            "certificate_hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+          }
+        },
+        {
+          "client_id": "305999112628-o10gfdt4d9bp0frtmf90bkhgib8o09ij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvj48TrvgRLytiJjLiLP-nXLszVmbt6xk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305999112628-o10gfdt4d9bp0frtmf90bkhgib8o09ij.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
