@@ -2,10 +2,9 @@ package com.parzidev.adventure
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.MediaStore
+import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 class CriandoLivroActivity : AppCompatActivity() {
@@ -13,23 +12,33 @@ class CriandoLivroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_criando_livro)
         supportActionBar?.hide()
+        val criarButton = findViewById<Button>(R.id.button_criar)
 
-
-        //Inputs
-        val inputNomeLivro = findViewById<EditText>(R.id.edit_text_nome_livro)
-        val inputNomeAutor = findViewById<EditText>(R.id.edit_text_nome_autor)
-        val inputNumeroPaginas = findViewById<EditText>(R.id.edit_text_total_paginas)
-        //Button Criar
-        val buttonInputImagemLivro = findViewById<ImageButton>(R.id.inputImageLivro)
-        val buttonCriar = findViewById<Button>(R.id.button_criar)
-
-
-        /*buttonInputImagemLivro.setOnClickListener {
-            val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
-            startActivityForResult(gallery, pickImage)
-
-        }*/
-
-
+        criarButton.setOnClickListener {
+            criaLivroNaLista()
+        }
     }
+
+        private fun criaLivroNaLista() {
+            val intent = Intent(this, BibliotecaActivity::class.java)
+                //var buttonInputImagemLivro = findViewById<ImageButton>(R.id.inputImageLivro)
+
+                //Nome Livro
+                val inputNomeLivro = findViewById<EditText>(R.id.editTextNomeLivro)
+                val enviaNomeLivro = inputNomeLivro.text.toString()
+                intent.putExtra("EXTRA_NOME_LIVRO", enviaNomeLivro)
+
+                //Nome Autor
+                val inputNomeAutor = findViewById<EditText>(R.id.editTextNomeAutor)
+                val enviaNomeAutor = inputNomeAutor.text.toString()
+                intent.putExtra("EXTRA_NOME_AUTOR", enviaNomeAutor)
+
+                //Número Total de Páginas
+                val inputNumeroPaginas = findViewById<EditText>(R.id.layoutEditTextTotalPaginas)
+                val enviaNumeroTotalPaginas = inputNumeroPaginas.text.toString().toInt()
+                intent.putExtra("EXTRA_TOTAL_NUMERO_PAGINAS", enviaNumeroTotalPaginas)
+
+            startActivity(intent)
+
+        }
 }

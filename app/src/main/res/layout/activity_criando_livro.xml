@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_text_nome_livro"
+        android:id="@+id/layoutEditTextNomeLivro"
         app:layout_constraintTop_toBottomOf="@id/inputImageLivro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
         app:hintTextColor="@color/white"
         android:background="@drawable/custom_inputs">
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edit_text_nome_livro"
+            android:id="@+id/editTextNomeLivro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/no_color"
@@ -53,8 +53,8 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_text_nome_autor"
-        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_nome_livro"
+        android:id="@+id/layoutEditTextNomeAutor"
+        app:layout_constraintTop_toBottomOf="@id/layoutEditTextNomeLivro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
@@ -66,7 +66,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:background="@color/black_15">
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edit_text_nome_autor"
+            android:id="@+id/editTextNomeAutor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/no_color"
@@ -76,8 +76,8 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_text_total_paginas"
-        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_nome_autor"
+        android:id="@+id/layoutEditTextTotalPaginas"
+        app:layout_constraintTop_toBottomOf="@id/layoutEditTextNomeAutor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
@@ -89,7 +89,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:background="@color/black_15">
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edit_text_total_paginas"
+            android:id="@+id/EditTextTotalPaginas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/no_color"
@@ -103,7 +103,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/criar"
-        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_total_paginas"
+        app:layout_constraintTop_toBottomOf="@id/layoutEditTextTotalPaginas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="64dp"

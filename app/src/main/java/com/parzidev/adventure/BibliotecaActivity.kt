@@ -2,15 +2,14 @@ package com.parzidev.adventure
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.load.model.Model
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.parzidev.adventure.adapter.LivroAdapter
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton as ExtendedFloatingActionButton1
@@ -22,19 +21,43 @@ class BibliotecaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_biblioteca)
         supportActionBar?.hide()
 
+        val nomeLivro = intent.getStringExtra("EXTRA_NOME_LIVRO")
+        val nomeAutor = intent.getStringExtra("EXTRA_NOME_AUTOR")
+        //RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER
+        //val totalPaginas = intent.getIntExtra("EXTRA_TOTAL_NUMERO_PAGINAS", 0)
+
+        val livro3 = Livro(
+            nomeLivro.toString(),
+            nomeAutor.toString(),
+            "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
+            10,
+            1,
+            1)
+
         //Início Lista
 
-        val primeiraPagina = 1
+        val livro1 = Livro(
+            "Trono de Vidro",
+            "Sarah J Mass",
+            "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
+            450,
+            1,
+            15)
 
-        val livro1 = Livro("Trono de Vidro", "Sarah J Mass", "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg", 450, primeiraPagina ,15)
-        val livro2 = Livro("The Witcher", "Andrezj", "https://m.media-amazon.com/images/I/511dqSSiUCL._SY346_.jpg", 400, primeiraPagina, 200)
+        val livro2 = Livro(
+            "The Witcher",
+            "Andrezj",
+            "https://m.media-amazon.com/images/I/511dqSSiUCL._SY346_.jpg",
+            400,
+            1,
+            200)
 
         //exemplo q deve funcionar val listaDeLivro = ArrayList<Model>()
         // arrayList.add(Model(..................... variaveis), R.drawable....)
         //val listaDeLivroAdd = emptyArray<Model>()
 
 
-        val listaDelivro = arrayListOf(livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2)
+        val listaDelivro = arrayListOf(livro3, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2)
         val recyclerViewLivro = findViewById<RecyclerView>(R.id.recycler_view_livro)
         recyclerViewLivro.layoutManager = LinearLayoutManager(this)
         recyclerViewLivro.adapter = LivroAdapter(listaDelivro)
