@@ -21,10 +21,10 @@ class BibliotecaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_biblioteca)
         supportActionBar?.hide()
 
-        val nomeLivro = intent.getStringExtra("EXTRA_NOME_LIVRO")
-        val nomeAutor = intent.getStringExtra("EXTRA_NOME_AUTOR")
+        val nomeLivro = intent.getStringExtra(EXTRA_MESSAGE)
+        val nomeAutor = intent.getStringExtra(EXTRA_MESSAGE)
         //RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER
-        //val totalPaginas = intent.getIntExtra("EXTRA_TOTAL_NUMERO_PAGINAS", 0)
+        //val totalPaginas = intent.getIntExtra(EXTRA_MESSAGE, 0)
 
         val livro3 = Livro(
             nomeLivro.toString(),
@@ -59,8 +59,11 @@ class BibliotecaActivity : AppCompatActivity() {
 
         val listaDelivro = arrayListOf(livro3, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2)
         val recyclerViewLivro = findViewById<RecyclerView>(R.id.recycler_view_livro)
-        recyclerViewLivro.layoutManager = LinearLayoutManager(this)
-        recyclerViewLivro.adapter = LivroAdapter(listaDelivro)
+        recyclerViewLivro.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = LivroAdapter(listaDelivro)
+        }
+
 
         //Final Lista
 

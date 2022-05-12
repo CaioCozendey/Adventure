@@ -20,23 +20,23 @@ class CriandoLivroActivity : AppCompatActivity() {
     }
 
         private fun criaLivroNaLista() {
-            val intent = Intent(this, BibliotecaActivity::class.java)
+            val intent = Intent(this, GeradorDeLivros::class.java)
                 //var buttonInputImagemLivro = findViewById<ImageButton>(R.id.inputImageLivro)
 
                 //Nome Livro
                 val inputNomeLivro = findViewById<EditText>(R.id.editTextNomeLivro)
                 val enviaNomeLivro = inputNomeLivro.text.toString()
-                intent.putExtra("EXTRA_NOME_LIVRO", enviaNomeLivro)
+                intent.putExtra(EXTRA_MESSAGE, enviaNomeLivro)
 
                 //Nome Autor
                 val inputNomeAutor = findViewById<EditText>(R.id.editTextNomeAutor)
                 val enviaNomeAutor = inputNomeAutor.text.toString()
-                intent.putExtra("EXTRA_NOME_AUTOR", enviaNomeAutor)
+                intent.putExtra(EXTRA_MESSAGE, enviaNomeAutor)
 
                 //Número Total de Páginas
-                val inputNumeroPaginas = findViewById<EditText>(R.id.layoutEditTextTotalPaginas)
+                /*val inputNumeroPaginas = findViewById<EditText>(R.id.layoutEditTextTotalPaginas)
                 val enviaNumeroTotalPaginas = inputNumeroPaginas.text.toString().toInt()
-                intent.putExtra("EXTRA_TOTAL_NUMERO_PAGINAS", enviaNumeroTotalPaginas)
+                intent.putExtra(EXTRA_MESSAGE, enviaNumeroTotalPaginas)*/
 
             startActivity(intent)
 
