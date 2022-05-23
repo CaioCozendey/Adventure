@@ -47,7 +47,7 @@ class BibliotecaActivity : AppCompatActivity() {
         //val listaDeLivroAdd = emptyArray<Model>()
 
 
-        val listaDelivro = arrayListOf(livro3, livro3)
+        val listaDelivro = arrayListOf(livro3)
         val recyclerViewLivro = findViewById<RecyclerView>(R.id.recycler_view_livro)
         recyclerViewLivro.apply {
             layoutManager = LinearLayoutManager(context)
