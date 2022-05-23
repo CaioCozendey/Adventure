@@ -21,43 +21,33 @@ class BibliotecaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_biblioteca)
         supportActionBar?.hide()
 
-        val nomeLivro = intent.getStringExtra(EXTRA_MESSAGE)
-        val nomeAutor = intent.getStringExtra(EXTRA_MESSAGE)
-        //RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER RESOLVER
-        //val totalPaginas = intent.getIntExtra(EXTRA_MESSAGE, 0)
+        val nomeLivro = intent.getStringExtra("EXTRA_MESSAGE_NOME_LIVRO")
+        val nomeAutor = intent.getStringExtra("EXTRA_MESSAGE_NOME_AUTOR")
+        val totalPaginas = intent.getIntExtra(EXTRA_MESSAGE, 0)
 
         val livro3 = Livro(
             nomeLivro.toString(),
             nomeAutor.toString(),
             "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
-            10,
-            1,
+            totalPaginas.toString(),
             1)
 
         //Início Lista
 
-        val livro1 = Livro(
+        /*val livro1 = Livro(
             "Trono de Vidro",
             "Sarah J Mass",
             "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
             450,
             1,
-            15)
-
-        val livro2 = Livro(
-            "The Witcher",
-            "Andrezj",
-            "https://m.media-amazon.com/images/I/511dqSSiUCL._SY346_.jpg",
-            400,
-            1,
-            200)
+            15)*/
 
         //exemplo q deve funcionar val listaDeLivro = ArrayList<Model>()
         // arrayList.add(Model(..................... variaveis), R.drawable....)
         //val listaDeLivroAdd = emptyArray<Model>()
 
 
-        val listaDelivro = arrayListOf(livro3, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2, livro1, livro2)
+        val listaDelivro = arrayListOf(livro3, livro3)
         val recyclerViewLivro = findViewById<RecyclerView>(R.id.recycler_view_livro)
         recyclerViewLivro.apply {
             layoutManager = LinearLayoutManager(context)

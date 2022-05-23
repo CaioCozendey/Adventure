@@ -29,7 +29,7 @@ class LivroAdapter (private val listaDeLivro: ArrayList<Livro>) :
                 textViewNomeLivro.text = livro.nomeLivro
                 textViewNomeAutor.text = livro.nomeAutor
                 Glide.with(itemView.context).load(livro.foto).into(imageViewImagemLivro)
-                progressBar.max = livro.numeroPaginasTotal
+                progressBar.max = livro.numeroPaginasTotal.toInt()
                 progressBar.progress = livro.paginaAtual
             }
         }

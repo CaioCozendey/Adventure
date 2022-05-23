@@ -89,7 +89,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:background="@color/black_15">
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/EditTextTotalPaginas"
+            android:id="@+id/editTextTotalPaginas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/no_color"
