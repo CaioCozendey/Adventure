@@ -13,19 +13,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
 
-        val button_criar_conta = findViewById<Button>(R.id.criar_conta)
-        val button_esqueceu_senha = findViewById<Button>(R.id.esqueceu_a_senha_btn)
-        val button_login = findViewById<Button>(R.id.login_btn)
+        val buttonCriarConta = findViewById<Button>(R.id.criar_conta)
+        val buttonEsqueceuSenha = findViewById<Button>(R.id.esqueceu_a_senha_btn)
+        val buttonLogin = findViewById<Button>(R.id.login_btn)
 
-        button_login.setOnClickListener {
+        buttonLogin.setOnClickListener {
             Toast.makeText(this, "Função não implementada", Toast.LENGTH_SHORT).show()
         }
 
-        button_esqueceu_senha.setOnClickListener {
-            Toast.makeText(this, "Função não implementada", Toast.LENGTH_SHORT).show()
+        buttonEsqueceuSenha.setOnClickListener {
+            val intent = Intent(this, LivroInformacoesActivity::class.java)
+            startActivity(intent)
         }
 
-        button_criar_conta.setOnClickListener {
+        buttonCriarConta.setOnClickListener {
             val intent = Intent(this,CadastroActivity::class.java)
             startActivity(intent)
         }

@@ -35,6 +35,5 @@
     <string name="remocaoAnuncios">Remover Propagandas</string>
     <string name="descricaoRemoverAnuncio">Remoção de todos os anúncios e propagandas, definitivamente.</string>
     <string name="loja">Loja</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
