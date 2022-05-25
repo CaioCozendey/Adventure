@@ -8,19 +8,23 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.parzidev.adventure.adapter.LivroAdapter
+import com.parzidev.adventure.fragment.BibliotecaFragment
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton as ExtendedFloatingActionButton1
 
 
 class BibliotecaActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_biblioteca)
         supportActionBar?.hide()
 
+        //Início Lista
         val nomeLivro = intent.getStringExtra("EXTRA_MESSAGE_NOME_LIVRO")
         val nomeAutor = intent.getStringExtra("EXTRA_MESSAGE_NOME_AUTOR")
         val totalPaginas = intent.getIntExtra(EXTRA_MESSAGE, 0)
@@ -32,40 +36,15 @@ class BibliotecaActivity : AppCompatActivity() {
             totalPaginas.toString(),
             1)
 
-        //Início Lista
-
-        /*val livro1 = Livro(
-            "Trono de Vidro",
-            "Sarah J Mass",
-            "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
-            450,
-            1,
-            15)*/
-
-        //exemplo q deve funcionar val listaDeLivro = ArrayList<Model>()
-        // arrayList.add(Model(..................... variaveis), R.drawable....)
-        //val listaDeLivroAdd = emptyArray<Model>()
-
-
         val listaDelivro = arrayListOf(livro3)
         val recyclerViewLivro = findViewById<RecyclerView>(R.id.recycler_view_livro)
         recyclerViewLivro.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = LivroAdapter(listaDelivro)
         }
-
-
         //Final Lista
 
-        //Início SearchView
-
-        //val searchView = findViewById<SearchView>(R.id.searchView)
-
-
-        //Final SearchView
-
         //Floating Action Button Início
-
         val rotateOpen: Animation by lazy{ AnimationUtils.loadAnimation(this, R.anim.fab_open) }
         val rotateClose: Animation by lazy{ AnimationUtils.loadAnimation(this, R.anim.fab_close) }
         val fromBottom: Animation by lazy{ AnimationUtils.loadAnimation(this, R.anim.fab_from_bottom) }

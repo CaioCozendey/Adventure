@@ -9,8 +9,7 @@
     <item
         android:title="@string/favoritos"
         android:icon="@drawable/ic_favorito_coracao"
-        android:id="@+id/bottom_navigation_coracao"
-        />
+        android:id="@+id/bottom_navigation_coracao"/>
 
     <item
         android:title="@string/conclu_dos"

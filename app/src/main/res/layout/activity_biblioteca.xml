@@ -122,7 +122,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/menu_bottom_navigation"
+        app:menu="@menu/bottom_navigation"
         android:background="@drawable/gradient_bottom_navigation"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"/>
