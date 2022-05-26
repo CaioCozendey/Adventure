@@ -13,19 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adventure">
         <activity
+            android:name=".InicioActivity"
+            android:exported="false" />
+        <activity
             android:name=".LivroInformacoesActivity"
             android:exported="true"
-            android:parentActivityName=".BibliotecaActivity"/>
+            android:parentActivityName=".InicioActivity" />
         <activity
             android:name=".LojaActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".CriandoLivroActivity"
             android:exported="true"
-            android:parentActivityName=".BibliotecaActivity"/>
-        <activity
-            android:name=".BibliotecaActivity"
-            android:exported="true" />
+            android:parentActivityName=".InicioActivity" />
         <activity
             android:name=".CadastroActivity"
             android:exported="false" />

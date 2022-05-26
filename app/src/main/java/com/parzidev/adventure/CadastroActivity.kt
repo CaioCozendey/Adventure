@@ -17,7 +17,7 @@ class CadastroActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.criar_conta_btn)
 
         button.setOnClickListener {
-            val intent = Intent(this, BibliotecaActivity::class.java)
+            val intent = Intent(this, InicioActivity::class.java)
             startActivity(intent)
         }
     }

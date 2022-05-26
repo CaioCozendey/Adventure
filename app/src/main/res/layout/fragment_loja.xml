@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LojaActivity"
+    android:background="@drawable/background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blac_55"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buttonPagueUmCafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/me_pague_um_caf"
+        android:textColor="@color/white"
+        android:background="@color/no_color"
+        android:textSize="18sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descricaoPagueUmCafe"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/buttonPagueUmCafe"
+        app:layout_constraintTop_toBottomOf="@id/buttonPagueUmCafe"
+        android:layout_marginTop="8dp"
+        android:text="@string/texto_pague_um_cafe"
+        android:textColor="@color/white80"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/valorCafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/buttonPagueUmCafe"
+        app:layout_constraintBottom_toBottomOf="@id/descricaoPagueUmCafe"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:text="@string/valor_cafe"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/cor_secundaria"
+        android:textSize="20sp"
+        android:background="@drawable/background_valor_loja"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buttonArmazenOffline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/descricaoPagueUmCafe"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/button_armaz_offline"
+        android:textColor="@color/white"
+        android:background="@color/no_color"
+        android:textSize="18sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descricaoArmazenOffline"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/buttonArmazenOffline"
+        app:layout_constraintTop_toBottomOf="@id/buttonArmazenOffline"
+        android:layout_marginTop="8dp"
+        android:text="@string/descricao_armaz_offline"
+        android:textColor="@color/white80"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/valorArmazenOffline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/buttonArmazenOffline"
+        app:layout_constraintBottom_toBottomOf="@id/descricaoArmazenOffline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:text="@string/valor_armaz_offline"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/cor_secundaria"
+        android:textSize="20sp"
+        android:background="@drawable/background_valor_loja"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buttonRemoverAnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/descricaoArmazenOffline"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/remocaoAnuncios"
+        android:textColor="@color/white"
+        android:background="@color/no_color"
+        android:textSize="18sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descricaoRemoverAnuncio"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/buttonRemoverAnuncio"
+        app:layout_constraintTop_toBottomOf="@id/buttonRemoverAnuncio"
+        android:layout_marginTop="8dp"
+        android:text="@string/descricaoRemoverAnuncio"
+        android:textColor="@color/white80"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/valorRemoverAnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/buttonRemoverAnuncio"
+        app:layout_constraintBottom_toBottomOf="@id/descricaoRemoverAnuncio"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:text="@string/valorRemoverAnuncio"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/cor_secundaria"
+        android:textSize="20sp"
+        android:background="@drawable/background_valor_loja"/>
+
+</androidx.fragment.app.FragmentContainerView>

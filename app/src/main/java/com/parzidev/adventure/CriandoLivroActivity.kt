@@ -20,7 +20,7 @@ class CriandoLivroActivity : AppCompatActivity() {
     }
 
         private fun criaLivroNaLista() {
-            val intent = Intent(this, BibliotecaActivity::class.java)
+            val intent = Intent(this, InicioActivity::class.java)
                 //var buttonInputImagemLivro = findViewById<ImageButton>(R.id.inputImageLivro)
 
                 //Nome Livro
@@ -36,6 +36,5 @@ class CriandoLivroActivity : AppCompatActivity() {
                 intent.putExtra(EXTRA_MESSAGE, inputNumeroPaginas)
 
             startActivity(intent)
-
         }
 }
