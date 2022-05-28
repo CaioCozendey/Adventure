@@ -4,26 +4,26 @@
     <item
         android:title="@string/biblioteca"
         android:icon="@drawable/ic_livraria_book"
-        android:id="@+id/bottom_navigation_livraria"/>
+        android:id="@+id/bottomNavigationBiblioteca"/>
 
     <item
         android:title="@string/favoritos"
         android:icon="@drawable/ic_favorito_coracao"
-        android:id="@+id/bottom_navigation_coracao"/>
+        android:id="@+id/bottomNavigationFavorito"/>
 
     <item
         android:title="@string/conclu_dos"
         android:icon="@drawable/ic_concluidos_check"
-        android:id="@+id/bottom_navigation_concluidos"/>
+        android:id="@+id/bottomNavigationConcluido"/>
 
     <item
         android:title="@string/anota_es"
         android:icon="@drawable/ic_anotacoes_notes"
-        android:id="@+id/bottom_navigation_anotacoes"/>
+        android:id="@+id/bottomNavigationAnotacoes"/>
 
     <item
         android:title="@string/loja"
         android:icon="@drawable/ic_loja"
-        android:id="@+id/lojaFragment"/>
+        android:id="@+id/bottomNavigationLoja"/>
 
 </menu>

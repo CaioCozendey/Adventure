@@ -4,7 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/background_valor_loja.xml" value="0.1345" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/bottom_nav_click_color.xml" value="0.2135" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/bottom_nav_clicked.xml" value="0.2135" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/bottom_nav_no_clicked.xml" value="0.2135" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/bottom_navigation_no_clicked.xml" value="0.2135" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/button_normal.xml" value="0.2135" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/button_pressed.xml" value="0.2135" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/button_verde_padrao.xml" value="0.2135" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/gradient_bottom_navigation.xml" value="0.1345" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/drawable/shape_background_itens_lista.xml" value="0.2135" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/font/font.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/activity_biblioteca.xml" value="0.33" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/activity_cadastro.xml" value="0.4512820512820513" />
@@ -16,10 +24,13 @@
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/activity_loja.xml" value="0.25" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/adapter_livro.xml" value="0.47893772893772896" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/fragment/fragment_favoritos.xml" value="0.4547008547008547" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/fragment_anotacoes.xml" value="0.24572649572649571" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/fragment_biblioetca.xml" value="0.44316239316239314" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/fragment_biblioteca.xml" value="0.22" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/fragment_concluido.xml" value="0.25726495726495724" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/fragment_favorito.xml" value="0.25726495726495724" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/fragment_favoritos.xml" value="0.25726495726495724" />
-        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/fragment_loja.xml" value="0.44316239316239314" />
+        <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/fragment_loja.xml" value="0.18" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/layout/menu_bottom_navigation.xml" value="0.4547008547008547" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/menu/bottom_navigation.xml" value="0.45384615384615384" />
         <entry key="..\:/Users/caioc/StudioProjects/Adventure_30/app/src/main/res/menu/menu.xml" value="0.41484375" />
