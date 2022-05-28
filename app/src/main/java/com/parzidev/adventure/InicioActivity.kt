@@ -2,7 +2,6 @@ package com.parzidev.adventure
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.AlarmClock
 import androidx.fragment.app.Fragment
 import com.parzidev.adventure.fragment.*
 import kotlinx.android.synthetic.main.activity_inicio.*
