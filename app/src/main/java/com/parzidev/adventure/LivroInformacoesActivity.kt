@@ -3,7 +3,6 @@ package com.parzidev.adventure
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.widget.Button
 
 class LivroInformacoesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,9 +13,6 @@ class LivroInformacoesActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = ""
-
-        val botaoAtualizar = findViewById<Button>(R.id.buttonAtualizar)
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

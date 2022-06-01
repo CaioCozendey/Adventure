@@ -2,11 +2,9 @@ package com.parzidev.adventure
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.AlarmClock.EXTRA_MESSAGE
-import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.parzidev.adventure.model.LivroDataObject
 import kotlinx.android.synthetic.main.activity_criando_livro.*
 
 class CriandoLivroActivity : AppCompatActivity() {
@@ -21,7 +19,6 @@ class CriandoLivroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_criando_livro)
         supportActionBar?.hide()
-        val criarButton = findViewById<Button>(R.id.button_criar)
         val buttonImagemLivro = findViewById<ImageButton>(R.id.inputImageLivro)
 
         buttonImagemLivro.setOnClickListener {
@@ -29,29 +26,24 @@ class CriandoLivroActivity : AppCompatActivity() {
         }
 
 
-        criarButton.setOnClickListener {
-            criaLivroNaLista()
+        button_criar.setOnClickListener {
+            if(buttonImagemLivro.drawable != null
+                && editTextNomeLivro.text.toString().trim{it <= ' '}.isNotEmpty()
+                && editTextNomeAutor.text.toString().trim{it <= ' '}.isNotEmpty()
+                && editTextTotalPaginas.text.toString().trim{it <= ' '}.isNotEmpty()) {
+
+                val setImageLivro = buttonImagemLivro.drawable
+                val setNomeLivro = editTextNomeLivro.text.toString()
+                val setNomeAutor = editTextNomeAutor.text.toString()
+                val setTotalPaginas = editTextTotalPaginas.text.toString().toInt()
+
+                LivroDataObject.setData(setNomeLivro, setNomeAutor, setImageLivro, setTotalPaginas)
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
-    private fun criaLivroNaLista() {
-        val intent = Intent(this, MainActivity::class.java)
-            //var buttonInputImagemLivro = findViewById<ImageButton>(R.id.inputImageLivro)
-
-            //Nome Livro
-            val inputNomeLivro = findViewById<EditText>(R.id.editTextNomeLivro).text.toString()
-            intent.putExtra("EXTRA_MESSAGE_NOME_LIVRO", inputNomeLivro)
-
-            //Nome Autor
-            val inputNomeAutor = findViewById<EditText>(R.id.editTextNomeAutor).text.toString()
-            intent.putExtra("EXTRA_MESSAGE_NOME_AUTOR", inputNomeAutor)
-
-            //Número Total de Páginas
-            val inputNumeroPaginas = findViewById<EditText>(R.id.editTextTotalPaginas).text.toString().toInt()
-            intent.putExtra(EXTRA_MESSAGE, inputNumeroPaginas)
-
-       startActivity(intent)
-    }
     private fun pickImageFromGallery() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"

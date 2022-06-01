@@ -7,24 +7,32 @@ import androidx.fragment.app.Fragment
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.parzidev.adventure.CriandoLivroActivity
 import com.parzidev.adventure.model.LivroDataClass
 import com.parzidev.adventure.R
+import com.parzidev.adventure.adapter.LivroAdapter
+import com.parzidev.adventure.model.LivroDataObject
+import kotlinx.android.synthetic.main.fragment_biblioteca.*
 
 
 class BibliotecaFragment : Fragment() {
 
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<LivroAdapter.LivroViewHolder>? = null
+
     private lateinit var fabMain: FloatingActionButton
     private lateinit var fabBook: ExtendedFloatingActionButton
     private lateinit var fabNote: ExtendedFloatingActionButton
-    private lateinit var recyclerViewLivro: LivroDataClass
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
         return inflater.inflate(R.layout.fragment_biblioteca, container, false)
     }
@@ -34,34 +42,14 @@ class BibliotecaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         animation()
 
-        //Início Lista
-        /*val nomeLivro = intent.getStringExtra("EXTRA_MESSAGE_NOME_LIVRO")
-        val nomeAutor = intent.getStringExtra("EXTRA_MESSAGE_NOME_AUTOR")
-        val totalPaginas = view.intent.getIntExtra(AlarmClock.EXTRA_MESSAGE, 0)
-
-        val livro3 = Livro(
-            nomeLivro.toString(),
-            nomeAutor.toString(),
-            "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
-            totalPaginas.toString(),
-            1)*/
-
-        /*val livro = LivroDataClass(
-            "The Witcher",
-            "Andrezj",
-            "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
-            200
-        )*/
-
-        /*val listaDelivro = arrayListOf(livro)
-        val recyclerViewLivro = view.findViewById<RecyclerView>(R.id.recyclerViewLivroInformacoes)
         recyclerViewLivro.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = LivroAdapter(listaDelivro)
-        }*/
-        //Final Lista
+            adapter = LivroAdapter(LivroDataObject.getAllData() as ArrayList<LivroDataClass>)
+        }
 
     }
+
+    //Função Floating Action Button animação
     fun animation() {
 
         val fabMain = view?.findViewById<FloatingActionButton>(R.id.action_button_add)
