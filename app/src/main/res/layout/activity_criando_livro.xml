@@ -41,7 +41,8 @@
         android:textColorHint="@color/white80"
         android:layout_marginTop="32dp"
         app:hintTextColor="@color/white"
-        android:background="@drawable/custom_inputs">
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:background="@color/black_15">
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextNomeLivro"
             android:layout_width="match_parent"

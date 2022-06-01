@@ -7,14 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.parzidev.adventure.CriandoLivroActivity
-import com.parzidev.adventure.Livro
+import com.parzidev.adventure.model.LivroDataClass
 import com.parzidev.adventure.R
-import com.parzidev.adventure.adapter.LivroAdapter
 
 
 class BibliotecaFragment : Fragment() {
@@ -22,7 +19,7 @@ class BibliotecaFragment : Fragment() {
     private lateinit var fabMain: FloatingActionButton
     private lateinit var fabBook: ExtendedFloatingActionButton
     private lateinit var fabNote: ExtendedFloatingActionButton
-    private lateinit var recyclerViewLivro: Livro
+    private lateinit var recyclerViewLivro: LivroDataClass
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +32,7 @@ class BibliotecaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        animation()
 
         //Início Lista
         /*val nomeLivro = intent.getStringExtra("EXTRA_MESSAGE_NOME_LIVRO")
@@ -48,12 +46,12 @@ class BibliotecaFragment : Fragment() {
             totalPaginas.toString(),
             1)*/
 
-        val livro = Livro(
+        /*val livro = LivroDataClass(
             "The Witcher",
             "Andrezj",
             "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
             200
-        )
+        )*/
 
         /*val listaDelivro = arrayListOf(livro)
         val recyclerViewLivro = view.findViewById<RecyclerView>(R.id.recyclerViewLivroInformacoes)
@@ -63,7 +61,6 @@ class BibliotecaFragment : Fragment() {
         }*/
         //Final Lista
 
-        animation()
     }
     fun animation() {
 
