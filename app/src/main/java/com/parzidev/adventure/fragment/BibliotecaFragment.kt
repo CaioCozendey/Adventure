@@ -7,10 +7,14 @@ import androidx.fragment.app.Fragment
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.parzidev.adventure.CriandoLivroActivity
+import com.parzidev.adventure.Livro
 import com.parzidev.adventure.R
+import com.parzidev.adventure.adapter.LivroAdapter
 
 
 class BibliotecaFragment : Fragment() {
@@ -18,6 +22,7 @@ class BibliotecaFragment : Fragment() {
     private lateinit var fabMain: FloatingActionButton
     private lateinit var fabBook: ExtendedFloatingActionButton
     private lateinit var fabNote: ExtendedFloatingActionButton
+    private lateinit var recyclerViewLivro: Livro
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,10 +46,17 @@ class BibliotecaFragment : Fragment() {
             nomeAutor.toString(),
             "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
             totalPaginas.toString(),
-            1)
+            1)*/
 
-        val listaDelivro = arrayListOf(livro3)
-        val recyclerViewLivro = view?.findViewById<RecyclerView>(R.id.recycler_view_livro)
+        val livro = Livro(
+            "The Witcher",
+            "Andrezj",
+            "https://images-na.ssl-images-amazon.com/images/I/81sppP3MAkL.jpg",
+            200
+        )
+
+        /*val listaDelivro = arrayListOf(livro)
+        val recyclerViewLivro = view.findViewById<RecyclerView>(R.id.recyclerViewLivroInformacoes)
         recyclerViewLivro.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = LivroAdapter(listaDelivro)

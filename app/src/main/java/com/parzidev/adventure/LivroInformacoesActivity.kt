@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Button
 import android.widget.ImageButton
 
 class LivroInformacoesActivity : AppCompatActivity() {
@@ -16,11 +17,12 @@ class LivroInformacoesActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = ""
 
+        val botaoAtualizar = findViewById<Button>(R.id.buttonAtualizar)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_options_livro, menu)
         return true
     }
-
 }

@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.parzidev.adventure.fragment.*
 import kotlinx.android.synthetic.main.activity_main.*
 
-class InicioActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

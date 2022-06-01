@@ -12,26 +12,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Adventure">
-        <activity
-            android:name=".InicioActivity"
-            android:exported="false" />
+
         <activity
             android:name=".LivroInformacoesActivity"
             android:exported="true"
-            android:parentActivityName=".InicioActivity" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".LojaActivity"
             android:exported="false" />
         <activity
             android:name=".CriandoLivroActivity"
             android:exported="true"
-            android:parentActivityName=".InicioActivity" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".CadastroActivity"
             android:exported="false" />
         <activity
+            android:name=".LoginActivity"
+            android:exported="true"/>
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

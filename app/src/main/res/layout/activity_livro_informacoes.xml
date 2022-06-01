@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
-    android:backgroundTintMode="screen">
+    android:background="@drawable/background">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -29,7 +28,11 @@
         android:text="452"
         android:background="@color/no_color"
         android:textSize="72sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="64"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/paginaAtualTexto"
@@ -38,9 +41,13 @@
         app:layout_constraintTop_toBottomOf="@id/paginaAtual"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/cinzaEscuro"
-        android:text="Página Atual"
-        android:textSize="16sp"/>
+        android:textColor="@color/white75"
+        android:text="@string/paginaAtual"
+        android:textSize="16sp"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="8"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nomeLivro"
@@ -50,10 +57,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="80dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:gravity="center"
         android:text="The Witcher III - Wild Hunt"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="8"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nomeAutor"
@@ -64,9 +75,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="64dp"
         android:text="Andrezj Sapkowski"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="24sp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="8"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewLivroInformacoes"
@@ -79,13 +94,13 @@
         android:layout_marginHorizontal="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/login_btn"
+        android:id="@+id/buttonAtualizar"
         android:background="@drawable/button_verde_padrao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="64dp"
         android:layout_marginTop="32dp"
-        android:text="Atualizar"
+        android:text="@string/atualizar"
         android:textColor="@color/white"
         android:theme="@android:style/ThemeOverlay.Material.Dark"
         app:layout_constraintEnd_toEndOf="parent"
