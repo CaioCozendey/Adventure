@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/livroLayout">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
@@ -84,7 +85,7 @@
                 android:src="@drawable/ic_coracao_favorito"
                 android:background="@color/no_color"
                 app:layout_constraintTop_toTopOf="@id/nome_livro"
-                app:layout_constraintEnd_toEndOf="@id/progress_bar" />
+                app:layout_constraintEnd_toEndOf="@id/progress_bar"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

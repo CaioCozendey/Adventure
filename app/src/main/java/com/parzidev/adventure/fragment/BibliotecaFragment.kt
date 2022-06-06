@@ -16,13 +16,10 @@ import com.parzidev.adventure.model.LivroDataClass
 import com.parzidev.adventure.R
 import com.parzidev.adventure.adapter.LivroAdapter
 import com.parzidev.adventure.model.LivroDataObject
-import kotlinx.android.synthetic.main.fragment_biblioteca.*
+import kotlinx.android.synthetic.main.fragment_biblioteca.view.*
 
 
 class BibliotecaFragment : Fragment() {
-
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<LivroAdapter.LivroViewHolder>? = null
 
     private lateinit var fabMain: FloatingActionButton
     private lateinit var fabBook: ExtendedFloatingActionButton
@@ -34,18 +31,22 @@ class BibliotecaFragment : Fragment() {
         savedInstanceState: Bundle?
 
     ): View? {
-        return inflater.inflate(R.layout.fragment_biblioteca, container, false)
+        val view = inflater.inflate(R.layout.fragment_biblioteca, container, false)
+
+        view.recyclerViewLivro.adapter = LivroAdapter(LivroDataObject.getAllData() as ArrayList<LivroDataClass>)
+        view.recyclerViewLivro.layoutManager = LinearLayoutManager(view.context)
+        view.action_button_livro.setOnClickListener {
+            val intent = Intent(view.context, CriandoLivroActivity::class.java)
+            startActivity(intent)
+        }
+
+        return view
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         animation()
-
-        recyclerViewLivro.apply {
-            layoutManager = LinearLayoutManager(context)
-            adapter = LivroAdapter(LivroDataObject.getAllData() as ArrayList<LivroDataClass>)
-        }
 
     }
 
@@ -62,11 +63,6 @@ class BibliotecaFragment : Fragment() {
         val toBottom: Animation by lazy { AnimationUtils.loadAnimation(context, R.anim.fab_to_bottom) }
 
         var clicked = false
-
-        fabBook?.setOnClickListener {
-            val intent = Intent(context, CriandoLivroActivity::class.java)
-            startActivity(intent)
-        }
 
         fabNote?.setOnClickListener {
             Toast.makeText(context, "Função não implementada", Toast.LENGTH_SHORT).show()

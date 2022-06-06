@@ -28,9 +28,9 @@ class CriandoLivroActivity : AppCompatActivity() {
 
         button_criar.setOnClickListener {
             if(buttonImagemLivro.drawable != null
-                && editTextNomeLivro.text.toString().trim{it <= ' '}.isNotEmpty()
-                && editTextNomeAutor.text.toString().trim{it <= ' '}.isNotEmpty()
-                && editTextTotalPaginas.text.toString().trim{it <= ' '}.isNotEmpty()) {
+            && editTextNomeLivro.text.toString().trim{it <= ' '}.isNotEmpty()
+            && editTextNomeAutor.text.toString().trim{it <= ' '}.isNotEmpty()
+            && editTextTotalPaginas.text.toString().trim{it <= ' '}.isNotEmpty()) {
 
                 val setImageLivro = buttonImagemLivro.drawable
                 val setNomeLivro = editTextNomeLivro.text.toString()
