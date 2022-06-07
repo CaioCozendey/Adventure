@@ -6,12 +6,15 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.AdapterView
+import android.widget.ListView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.parzidev.adventure.CriandoLivroActivity
+import com.parzidev.adventure.LivroInformacoesActivity
 import com.parzidev.adventure.model.LivroDataClass
 import com.parzidev.adventure.R
 import com.parzidev.adventure.adapter.LivroAdapter
@@ -33,12 +36,14 @@ class BibliotecaFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_biblioteca, container, false)
 
+
         view.recyclerViewLivro.adapter = LivroAdapter(LivroDataObject.getAllData() as ArrayList<LivroDataClass>)
         view.recyclerViewLivro.layoutManager = LinearLayoutManager(view.context)
         view.action_button_livro.setOnClickListener {
             val intent = Intent(view.context, CriandoLivroActivity::class.java)
             startActivity(intent)
         }
+
 
         return view
     }

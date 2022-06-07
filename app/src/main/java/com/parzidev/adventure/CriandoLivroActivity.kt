@@ -36,8 +36,9 @@ class CriandoLivroActivity : AppCompatActivity() {
                 val setNomeLivro = editTextNomeLivro.text.toString()
                 val setNomeAutor = editTextNomeAutor.text.toString()
                 val setTotalPaginas = editTextTotalPaginas.text.toString().toInt()
+                val setPaginaAtual = editTextPaginaAtual.text.toString().toInt()
 
-                LivroDataObject.setData(setNomeLivro, setNomeAutor, setImageLivro, setTotalPaginas)
+                LivroDataObject.setData(setNomeLivro, setNomeAutor, setImageLivro, setTotalPaginas, setPaginaAtual)
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }

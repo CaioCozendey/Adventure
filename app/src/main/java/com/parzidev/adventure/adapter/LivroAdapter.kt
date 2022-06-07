@@ -11,11 +11,14 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.parzidev.adventure.LivroInformacoesActivity
 import com.parzidev.adventure.MainActivity
 import com.parzidev.adventure.model.LivroDataClass
 import com.parzidev.adventure.R
 import com.parzidev.adventure.fragment.BibliotecaFragment
+import kotlinx.android.synthetic.main.activity_livro_informacoes.view.*
 import kotlinx.android.synthetic.main.adapter_livro.view.*
+import org.w3c.dom.Text
 
 class LivroAdapter (private val listaDeLivro: ArrayList<LivroDataClass>)
     : RecyclerView.Adapter<LivroAdapter.LivroViewHolder>(){

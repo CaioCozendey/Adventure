@@ -7,7 +7,7 @@ data class LivroDataClass(
     val nomeAutor: String,
     val foto: Drawable,
     val numeroPaginasTotal: Int,
-    val paginaAtual: Int = 1,
+    val paginaAtual: Int,
     val primeiraPagina: Int = 1,
     val favorito: Boolean = false,
     val concluido: Boolean = false
